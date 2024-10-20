@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детективное Расследование</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Детективное Агентство</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#cases">Дела</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы специализируемся на расследованиях и раскрытии преступлений.</p>
+        </section>
+
+        <section id="cases">
+            <h2>Дела</h2>
+            <ul>
+                <li>Исчезновение Джона Смита</li>
+                <li>Загадка старинного амулета</li>
+                <li>Тайна исчезнувшей картины</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Детективное Агентство</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    background-image: url('images/background.jpg'); /* Добавьте фон в стиле детектива */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: rgba(44, 62, 80, 0.8);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(52, 73, 94, 0.8);
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background: rgba(44, 62, 80, 0.9);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+</style>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Предотвращает отправку формы
+    alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+    this.reset(); // Сбросить форму
+});
+</script>
